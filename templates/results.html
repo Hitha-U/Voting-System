@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Voting Results</title>
+</head>
+<body style="text-align:center; font-family: Arial;">
+    <h2>🗳️ Voting Results</h2>
+    <p>Total Votes Cast: <strong>{{ total_votes }}</strong></p>
+    <h3>Winner: <span style="color: green;">{{ winner }}</span></h3>
+
+    <h4>Vote Counts:</h4>
+    <ul style="list-style: none; padding: 0;">
+        {% for candidate, count in votes.items() %}
+            <li>{{ candidate }} — {{ count }} votes</li>
+        {% endfor %}
+    </ul>
+    <a href="/logout"><button>Logout</button></a>
+</body>
+</html>
